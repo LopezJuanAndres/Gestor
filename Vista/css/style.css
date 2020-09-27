@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background:#010e11 ;
+}
+h1{
+    color:rgb(31, 227, 241);
+    text-align: center;
+}
+table{
+    width:25%;
+    background-color: rgb(0, 7, 8);
+    border:2px dotted rgb(15, 229, 236);
+margin:auto;
+}
+.izq{
+   
+    text-align: right;
+}
+.der{
+    text-align: left;
+    
+  
+}
+td{
+    text-align: center;
+    color: rgb(15, 241, 230);
+    padding:10px;
+}
