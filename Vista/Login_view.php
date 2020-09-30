@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Login</title>
-</head>
-<body>
-    <h1>Introduce tus datos</h1>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td class="izq">DNI:</td><td class="der"><input type="text"name="login"></td></tr>
-                <tr><td class="izq">Password:</td><td class="der"><input type="password" name="password"></td></tr>
-                <tr><td colspan="2"><input type="submit" name="submit" value="Ingresar"></td></tr>
-                </table>
-
-</body>
-</html>
+<?php include '../Partes/Encabezado.php'?>
+    <div class="container">
+     <div class="row mt-3 justify-content-md-center">
+        <div class="col -md-6">
+             <form action="" method="POST">
+                 <div class="form-group">
+                         <label for="DNI">Nombre:</label>
+                         <input class="form-control"name="login" placeholder="Numero de DNI" type="text" value="">
+                 </div>
+                 <div class="form-group">
+                          <label for="password">Contraseña:</label>
+                         <input class="form-control" name="password" value="" type="password">
+                </div>
+      <button type="submit" name="submit" class="btn btn-sm btn-block btn-primary"> Iniciar Sesion</button>
+</form>
+      </div> 
+      </div>    
+      </div>            
+ <?php include '../Partes/Pie.php'?>
