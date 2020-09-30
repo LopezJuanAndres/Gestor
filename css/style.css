@@ -30,3 +30,6 @@ td{
     color: rgb(15, 241, 230);
     padding:10px;
 }
+.alerta{
+    background-color: red;
+}

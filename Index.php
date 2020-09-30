@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <a href="vista/Login.php"><h1>Ingresar al Sistema</h1></a>
+    <a href="Controlador/Controlador.php"><h1>Ingresar al Sistema</h1></a>
 </body>
 </html>
