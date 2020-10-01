@@ -1,6 +1,6 @@
 <?php 
  include '../Vista/Registro_view.php';
- include 'Modelo/Registro_model.php';
+ include '../Modelo/Registro_model.php';
  
 if (isset($_POST['Registrar'])){
     $DNI =$_POST['login'];

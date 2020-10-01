@@ -12,7 +12,7 @@ if (isset($_POST['Iniciar'])){
         if($usuario->GetUsuario($DNI,$Contraseña)==true){
             session_start();
             $_SESSION['Profesor']=$DNI;
-            header('Location:Menu_controller.php');
+            header('Location:Controlador/Menu_controller.php');
         }else {
             echo '<div class="alert-danger">El usuario no existe</div>';
         }

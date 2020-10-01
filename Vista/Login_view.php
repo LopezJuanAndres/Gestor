@@ -1,4 +1,4 @@
-<?php include 'Partes/Encabezado.php'?>
+<?php?>
     <div class="container">
      <div class="row mt-3 justify-content-md-center">
         <div class="col-md-3">
