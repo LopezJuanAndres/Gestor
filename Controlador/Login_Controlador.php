@@ -1,8 +1,8 @@
 <?php 
- include '../Vista/Login_view.php';
- include '../Modelo/login_model.php';
+ include 'Vista/Login_view.php';
+ include 'Modelo/login_model.php';
  
-if (isset($_POST['submit'])){
+if (isset($_POST['Iniciar'])){
     $DNI =$_POST['login'];
     $Contraseña =$_POST['password'];
     if (empty($DNI) || empty($Contraseña)) {
@@ -17,5 +17,8 @@ if (isset($_POST['submit'])){
             echo '<div class="alert-danger">El usuario no existe</div>';
         }
         }
+    }
+    if (isset($_POST['Registrarse'])){
+        header('Location:Controlador/Registrarse_controller.php');
     }
 ?>

@@ -1,5 +1,5 @@
 <?php 
-require_once '../Modelo/Conectar.php';
+require_once 'Modelo/Conectar.php';
 class Login_model extends Conectar {
     public function GetUsuario($DNI,$Contraseña){
 $sql="SELECT * FROM login WHERE DNI='$DNI' AND Contraseña='$Contraseña'"; //almacena en la variable la consulta sql 
