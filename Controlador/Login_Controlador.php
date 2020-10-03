@@ -12,13 +12,14 @@
         echo '<div class="alert-danger">Nombre de usuario o contraseña vacio</div>';
     } else {
         $usuario=new Login_model;
-        require_once 'Modelo/Conectar.php';
+        
         if($usuario->GetUsuario($DNI,$Contraseña)==true){
-            session_start();
-            $_SESSION['Profesor']=$DNI;
+           // session_start();
+           // $_SESSION['Profesor']=$DNI;
             header('Location:Controlador/Menu_controller.php');
             }   else {
             echo '<div class="alert-danger">El usuario no existe</div>';
+            
                 }
     }
              

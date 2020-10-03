@@ -1,15 +1,11 @@
 <?php 
-class Conectar {
-    public static function conexion(){
-        try{
-            $conexion=new PDO ('mysql:host=localhost; dbname=gestorasistencia','root','admin123');
-            $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $conexion->exec("SET CHARACTER SET UTF8");
-        } catch (Exception  $e) {
-                die ("Error". $e->getMessage());
-                echo"Linea del error".$e->getLine();
-            }
-            return $conexion;
-        }
-    }
-?>
+class Conectar { 
+    
+public function conexion(){
+   $con = mysqli_connect("localhost","root", "admin123", "gestorasistencia");
+   return $con;
+}
+
+   }
+    ?>
+    

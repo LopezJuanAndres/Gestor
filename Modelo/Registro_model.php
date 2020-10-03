@@ -1,14 +1,25 @@
 <?php 
-include 'Conectar.php';
-$DNI =$_POST['login'];
-$Contraseña =$_POST['password'];
-$recontraseña=$_POST['repassword'];
-$insertar="INSERT INTO login VALUES ('$DNI','$Contraseña','$recontraseña')";
-$query=mysqli_query($conexion,$insertar);
-if ($query){
-    echo "Correcto";
-}else {
-    echo "Incorrecto";
+include ("Conectar.php");
+
+class Registro extends Conectar {
+    public function SetUsuario($DNI,$Contraseña){
+        $sql="INSERT INTO login (DNI,Contraseña) VALUES ('$DNI','$Contraseña')";
+        $result=$this->conexion()->query($sql);
+    }
+
+public function Verificar(){
+    $sql='SELECT * FROM login';
+    $result=$this->conexion()->query($sql);
+     $verificar=0;
+    while($resultado=mysqli_fetch_object($result))
+    {if ($resultado->DNI==$_POST['login'])
+     {
+          $verificar=1;
+     }
+     }
+    return $verificar;
+}
+
 }
 
 ?>

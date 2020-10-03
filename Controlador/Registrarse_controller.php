@@ -1,25 +1,27 @@
 <?php 
-
-
  include '../Modelo/Registro_model.php';
  require '../Vista/Registro_view.php';
  
  if (isset($_POST['Registrar'])){
     $DNI =$_POST['login'];
     $Contraseña =$_POST['password'];
-    $recontraseña=$_POST['repassword'];
-if (empty($DNI) || empty($Contraseña)||empty($recontraseña)){
-     echo '<div class="alert-danger">Complete todos los campos</div>'; }
+    
+    if (empty($DNI) || empty($Contraseña)) {
+      echo '<div class="alert alert-warning">Complete todos los campos por favor!</div>';
+    }
  else {
-    $usuarionuevo= new Registro_model;
+    $usuarionuevo= new Registro;
+    if ($usuarionuevo->Verificar()==1){
+      echo'<div class="alert alert-warning">El Usuario ya existe en la base de datos</div>';
+    }
     $usuarionuevo-> SetUsuario($DNI,$Contraseña);
-      //header('Location:../Index.php');
-      echo '<div class="alert-success">Cuenta registrada correctamente</div>';
+    header('Location:../Index.php');
+     
  }      
 }
 
 if (isset($_POST['Cancelar'])){
 header('Location:../Index.php');
 }
-   
+  
 ?>
