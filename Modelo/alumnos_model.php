@@ -6,6 +6,12 @@ class Alumnos extends Conectar {
         $result= $this->conexion()->query($sql);//almacena en la variable el resultado del metod     
       return$result; 
       }
+      public function BuscarAlumno(){
+        $sql="SELECT * FROM alumnos"; //almacena en la variable la consulta sql 
+        $result= $this->conexion()->query($sql);//almacena en la variable el resultado del metod     
+      return$result; 
+      }
+
 
       public function añadirAlumnos($Nombre,$Apellido,$Documento,$Telefono,$Direccion,$Correo,$FNac){
         $sql="INSERT INTO alumnos (Nombre,Apellido,Documento,Telefono,Dirreccion,Correo,FechaNacimiento) VALUES ('$Nombre','$Apellido','$Documento','$Telefono','$Direccion','$Correo','$FNac')" ; //almacena en la variable la consulta sql 

@@ -1,7 +1,33 @@
 <div class="container">
+
+
+<nav id="nav" class="navbar navbar-expand-sm bg-light" >
+    <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      menu Desplegable
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+
+  </ul>
+</nav>
      <div class="row mt-3 justify-content-md-center">
         <div class="col-md-3">
-             <form action="" method="POST">
+             <form  class="form-inline" action="" method="POST">
                  <div class="form-group">
                          <label for="Nombre">Ingrese el Nombre del alumno:</label>
                          <input class="form-control"name="Nombre" placeholder="Juan Carlos" type="text" value="">
