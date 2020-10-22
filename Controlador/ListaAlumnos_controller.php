@@ -1,6 +1,5 @@
 <?php
-      include '../Vista/Menu_View.php';
-     
-     
+      include '../Vista/ListaAlumnos_View.php';
+        
      
      ?>

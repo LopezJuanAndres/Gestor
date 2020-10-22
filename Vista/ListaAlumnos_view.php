@@ -1,3 +1,4 @@
+<?php include '../Partes/Encabezado.php'?>
 <div class="container">
 <H1 class="text-center">Listado de Alumnos</H1>
 <nav class="navbar justify-content-center navbar-expand-sm bg-dark navbar-dark sticky-top">
@@ -5,22 +6,11 @@
     <input class="form-control mr-sm-2" type="text" placeholder="Nombre Alumno">
     <button class="btn btn-success" name="Buscar" type="submit" >Buscar</button>
   </form>
-<ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="../Vista/Alumnos_view.php">Agregar</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Modificar</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Eliminar</a>
-    </li>
-    
-    </ul>  
+ 
 </nav> 
 <div class="container">
 <table class="table table-striped table-bordered table-hover ">
-<tr>
+<tr class="bg-warning text-center">
 <th>Id</th>
 <th>Nombre</th>
 <th>Apellido</th>
@@ -36,9 +26,9 @@ $lista=$alumnos->GetAlumnos();
 $fila=mysqli_fetch_row($lista) ;
  foreach($lista as $fila):?>
 <tr>
-<td><?php echo $fila['Apellido'] ?> </td>
-<td> <?php echo $fila['Nombre']?> </td>
 <td><?php echo $fila['IdAlumno']?></td>
+<td> <?php echo $fila['Nombre']?> </td>
+<td><?php echo $fila['Apellido'] ?> </td>
 <td><?php echo $fila['Documento']?>  </td>
 <td><?php echo $fila['Telefono']?> </td>
 <td><?php echo $fila['Dirreccion']?> </td>
@@ -48,5 +38,5 @@ $fila=mysqli_fetch_row($lista) ;
  <?php endforeach; ?>
 </table>
 </div>
-
+<?php include '../Partes/Pie.php'?>
 

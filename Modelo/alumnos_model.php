@@ -1,6 +1,8 @@
 <?php 
 include 'Conectar.php';
 class Alumnos extends Conectar {
+
+  
  public function GetAlumnos(){
         $sql="SELECT * FROM alumnos"; //almacena en la variable la consulta sql 
         $result= $this->conexion()->query($sql);//almacena en la variable el resultado del metod     

@@ -8,7 +8,7 @@
                <div class="dropdown-menu bg-dark  ">
                <a class="dropdown-item text-success" href="ListaAlumnos_controller.php">Ver Alumnos</a>
                <a class="dropdown-item text-success" href="Alumno_controller.php">Agregar-Modificar-Eliminar</a>
-               <a class="dropdown-item text-success" href="ReporteAlumno_controller.php">Imprimir Alumnos</a>
+               <a class="dropdown-item text-success" href="ReporteAlumnos_controller.php">Imprimir Alumnos</a>
                </div>
             </li>
             <li class="nav-item m-1">
